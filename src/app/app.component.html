@@ -1,16 +1,17 @@
 <div class="flex-container">
     <div class="item" *ngFor="let article of articles">
-        <img [src]="'assets/' + article.id + '.jpg'" alt="{{article.name}}" (click)="article.quantity = article.quantity + 1">
+        <img [src]="'assets/' + article.id + '.jpg'" alt="{{article.name}}" (click)="changeQuantity(article, 1)">
         <h2>{{article.name}}</h2>
         <!--<p>{{article.description}}</p>-->
         <p>Price: €{{article.price}}</p>
-        <button (click)="article.quantity = article.quantity - 1">-</button>
+        <button (click)="changeQuantity(article, -1)">-</button>
         <span>{{article.quantity}}</span>
-        <button (click)="article.quantity = article.quantity + 1">+</button>
+        <button (click)="changeQuantity(article, 1)">+</button>
     </div>
 </div>
   <footer>
-    <p>Total: €{{getTotalPrice()}}</p>
+    <span>Total: €{{getTotalPrice()}}</span>
+    <button>Kaufen</button>
   </footer>
 
 

@@ -45,7 +45,7 @@ html, body {
   button {
     margin-left: 10px;
     margin-right: 10px;
-    width: 30px;
+    min-width: 30px;
     height: 30px;
   }
   

@@ -15,6 +15,13 @@ export class AppComponent {
     this.articles = this.dataService.getArticles();
   }
 
+  changeQuantity(article:Article, amount){
+    article.quantity = article.quantity + amount;
+    if(article.quantity < 0){
+      article.quantity = 0;
+    }
+  }
+
   getTotalPrice(): number {
     return this.articles.reduce((total, article) => total + (article.price * article.quantity), 0);
   }

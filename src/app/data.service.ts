@@ -6,10 +6,11 @@ import { Article } from './article.model';
 })
 export class DataService {
   articles: Article[] = [
-    { id: 1, name: 'Chips', description: 'Description 1', price: 1.2, quantity: 0 },
+    { id: 1, name: 'Chips', description: 'Description 1', price: 1.5, quantity: 0 },
     { id: 2, name: 'Schokolade', description: 'Description 2', price: 2, quantity: 0 },
     { id: 3, name: 'Pizza', description: 'Description 2', price: 5, quantity: 0 },
     { id: 4, name: 'Baguette', description: 'Description 2', price: 3.5, quantity: 0 },
+    { id: 5, name: 'Spende', description: 'Description 2', price: 1, quantity: 0 },
     // Add more articles as needed
   ];
 
